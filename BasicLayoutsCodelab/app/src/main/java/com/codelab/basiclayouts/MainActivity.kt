@@ -16,7 +16,6 @@
 
 package com.codelab.basiclayouts
 
-import android.content.ContentValues
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -379,7 +378,7 @@ fun MySootheApp(windowSize: WindowSizeClass) {
         WindowWidthSizeClass.Compact -> {
             MySootheAppPortrait()
         }
-        WindowWidthSizeClass.Expanded -> {
+        else -> {
             MySootheAppLandscape()
         }
     }
