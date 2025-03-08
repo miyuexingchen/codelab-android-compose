@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.Inbox
 import androidx.compose.material.icons.filled.People
 import androidx.compose.material.icons.outlined.ChatBubbleOutline
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
@@ -74,7 +75,10 @@ fun ReplyAppContent(
             EmptyComingSoon(modifier = Modifier.weight(1f))
         }
 
-        NavigationBar(modifier = Modifier.fillMaxWidth()) {
+        NavigationBar(
+            modifier = Modifier.fillMaxWidth(),
+            containerColor = MaterialTheme.colorScheme.surfaceVariant
+        ) {
             TOP_LEVEL_DESTINATIONS.forEach { replyDestination ->
                 NavigationBarItem(
                     selected = selectedDestination.value == replyDestination.route,
